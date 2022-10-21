@@ -4,15 +4,10 @@ pipeline {
     maven 'Maven 3.6' 
   }
   stages {
-    stage ('Build') {
-      steps {
-        sh 'mvn clean package'
-      }
-    }
-    stage ('Test') {
+      stage ('Test') {
       steps {
         script {
-         sh 'mvn verify'
+         sh 'mvn clean verify'
         }
       }
     }
