@@ -7,7 +7,7 @@ pipeline {
       stage ('Test') {
       steps {
         script {
-         sh 'mvn clean verify'
+         bat 'mvn clean verify'
         }
       }
     }
